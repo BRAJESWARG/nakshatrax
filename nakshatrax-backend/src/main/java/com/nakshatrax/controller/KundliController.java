@@ -39,9 +39,23 @@ public class KundliController {
                 planets
         );
 
-        return new KundliResult(
-                chart,
-                "Strong leadership qualities with emotional sensitivity."
+        // 🔹 Dynamic interpretation using user input
+        String interpretation = String.format(
+                "Kundli generated for %s born on %s at %s in %s (Lat: %.4f, Long: %.4f). " +
+                        "Strong leadership qualities with emotional sensitivity.",
+                input.getName(),
+                input.getDateOfBirth(),
+                input.getTimeOfBirth(),
+                input.getPlace(),
+                input.getLatitude(),
+                input.getLongitude()
         );
+
+        return new KundliResult(chart, interpretation);
+
+//        return new KundliResult(
+//                chart,
+//                "Strong leadership qualities with emotional sensitivity."
+//        );
     }
 }
