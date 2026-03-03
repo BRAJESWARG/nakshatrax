@@ -1,11 +1,20 @@
 package com.nakshatrax.model;
 
 public class KundliResult {
-    public Object chart;
-    public String interpretation;
 
-    public KundliResult(Object chart, String interpretation) {
+    private ChartData chart;
+    private String interpretation;
+
+    public KundliResult(ChartData chart, String interpretation) {
         this.chart = chart;
         this.interpretation = interpretation;
+    }
+
+    public ChartData getChart() {
+        return chart;
+    }
+
+    public String getInterpretation() {
+        return interpretation;
     }
 }
