@@ -1,7 +1,7 @@
 import axios from "axios"
 import { KundliInput, KundliResult } from "../types/api"
 
-const BASE = "/api/astrology"
+const BASE = "/api/nakshatrax"
 
 export const createKundli = async (
     data: KundliInput
